@@ -1,0 +1,46 @@
+.activities.section {
+  padding-top: 0;
+  text-align: center;
+}
+
+.activities__title {
+  margin-bottom: 50px;
+
+  font-size: 36px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: var(--main-dark-color);
+}
+
+.activities__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: var(--main-gap);
+}
+
+.activities__item {
+  position: relative;
+
+  width: calc((100% - 2 * var(--main-gap)) / 3);
+}
+
+.activities__wrap {
+  position: absolute;
+  bottom: 0;
+
+  padding: 27px;
+  width: 100%;
+
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+.activities__name {
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--main-white-color);
+}
