@@ -13,7 +13,6 @@
 
 .hero-overlay {
   height: 400px;
-  max-width: 480px;
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(
@@ -26,6 +25,10 @@
   background-size: cover;
   background-position: center;
 
+  @include media(480px) {
+    max-width: 480px;
+  }
+  
   @include media(768px) {
     max-width: 768px;
   }
