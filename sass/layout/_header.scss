@@ -7,10 +7,22 @@
   align-items: center;
 }
 
+.mobile__btn-open {
+  margin-left: auto;
+
+  @include media(768px) {
+    display: none;
+  }
+}
+
+.mobile__btn-close {
+
+}
+
 .navigation {
   margin-left: 93px;
 
-  @media  screen and (max-width: 1199px) {
+  @media screen and (max-width: 767px) {
     display: none;
   }
 }
@@ -56,8 +68,14 @@
 .contacts {
   display: flex;
   gap: 30px;
+  margin-left: auto;
 
-  @media  screen and (max-width: 1199px) {
+  @include media(768px) {
+    display: block;
+    
+  }
+
+  @media screen and (max-width: 767px) {
     display: none;
   }
 }

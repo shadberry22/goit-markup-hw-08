@@ -27,11 +27,8 @@
   justify-content: center;
   align-items: center;
   height: 92px;
-
-  @include media(450px) {
-    width: calc((100% - var(--main-gap)) / 2);
-  }
-
+  width: calc((100% - var(--main-gap)) / 2);
+    
   @include media(768px) {
     width: calc((100% - 2 * var(--main-gap)) / 3);
   }

@@ -24,6 +24,7 @@ subscribe-form {
 }
 
 .subscribe-form__field {
+  width: 100%;
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 15px 16px;
@@ -38,7 +39,7 @@ subscribe-form {
   color: rgba(255, 255, 255, 0.6);
 
   @include media(768px) {
-    min-width: 450px;
+    max-width: 450px;
   }
 
   @include media(1200px) {
