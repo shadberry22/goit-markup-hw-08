@@ -1,11 +1,25 @@
 .features__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--main-gap);
+  @include media(768px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--main-gap);
+  }
 }
 
 .features__item {
-  width: calc((100% - 3 * var(--main-gap)) / 4);
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include media(768px) {
+    width: calc((100% - var(--main-gap)) / 2);
+  }
+
+  @include media(1200px) {
+    width: calc((100% - 3 * var(--main-gap)) / 4);
+  }
 }
 
 .features__box {
