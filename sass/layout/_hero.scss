@@ -15,27 +15,42 @@
   height: 400px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url("../images/hero_image.jpg");
+  background-image: var(--hero-lin-gradient),
+    url("../images/hero_image_mob.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 
+  @include retina {
+    background-image: var(--hero-lin-gradient),
+      url("../images/hero_image_mob@x2.jpg");
+  }
+
   @include media(480px) {
     max-width: 480px;
   }
-  
+
   @include media(768px) {
     max-width: 768px;
+    background-image: var(--hero-lin-gradient),
+      url("../images/hero_image_tab.jpg");
+
+    @include retina {
+      background-image: var(--hero-lin-gradient),
+        url("../images/hero_image_tab@x2.jpg");
+    }
   }
 
   @include media(1200px) {
     height: 600px;
     max-width: 1600px;
+    background-image: var(--hero-lin-gradient),
+      url("../images/hero_image_desk.jpg");
+
+    @include retina {
+      background-image: var(--hero-lin-gradient),
+        url("../images/hero_image_desk@x2.jpg");
+    }
   }
 }
 

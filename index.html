@@ -18,7 +18,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./css/main.min.css" />    
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
 
   <body>
@@ -27,13 +27,35 @@
         <a class="logo link" href="./index.html"
           >Web<span class="secondary-black">Studio</span></a
         >
+
+        <button
+          type="button"
+          class="menu__btn-open js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          data-menu-button
+        >
+          <svg
+            class="menu__icon"
+            aria-label="Перемикач мобільного меню"
+            width="40"
+            height="40"
+          >
+            <use class="icon-menu" href="./images/icons.svg#icon_menu"></use>
+          </svg>
+        </button>
+
         <nav class="navigation">
           <ul class="nav-menu list">
             <li>
-              <a class="nav-menu__link link current" href="./index.html">Студія</a>
+              <a class="nav-menu__link link current" href="./index.html"
+                >Студія</a
+              >
             </li>
             <li>
-              <a class="nav-menu__link link" href="./portfolio.html">Портфоліо</a>
+              <a class="nav-menu__link link" href="./portfolio.html"
+                >Портфоліо</a
+              >
             </li>
             <li><a class="nav-menu__link link" href="">Контакти</a></li>
           </ul>
@@ -181,7 +203,7 @@
               <img
                 src="./images/team_image_1.jpg"
                 alt="Ігор Дем'яненко"
-                width="450"                
+                width="450"
               />
               <div class="team__card">
                 <h3 class="team__member">Ігор Дем'яненко</h3>
@@ -223,7 +245,7 @@
               <img
                 src="./images/team_image_2.jpg"
                 alt="Ольга Рєпіна"
-                width="450"                
+                width="450" 
               />
               <div class="team__card">
                 <h3 class="team__member">Ольга Рєпіна</h3>
@@ -265,7 +287,7 @@
               <img
                 src="./images/team_image_3.jpg"
                 alt="Микола Тарасов"
-                width="450"                
+                width="450"
               />
               <div class="team__card">
                 <h3 class="team__member">Микола Тарасов</h3>
@@ -307,7 +329,7 @@
               <img
                 src="./images/team_image_4.jpg"
                 alt="Михайло Єрмаков"
-                width="450"                
+                width="450"
               />
               <div class="team__card">
                 <h3 class="team__member">Михайло Єрмаков</h3>
@@ -407,7 +429,6 @@
 
     <footer class="footer">
       <div class="footer__container container">
-        
         <div class="footer__tablet">
           <div class="footer__wrap">
             <a class="logo link" href="./index.html"
@@ -439,7 +460,7 @@
               </ul>
             </address>
           </div>
-  
+
           <div class="footer__wrap footer__wrap--right">
             <p class="footer__title">приєднуйтесь</p>
             <ul class="socials list">
@@ -497,6 +518,69 @@
         </form>
       </div>
     </footer>
+
+    <!-- Mobile Menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu" data-menu>
+      <button type="button" class="menu__btn-close js-close-menu">
+        <svg
+          class="menu__icon"
+          aria-label="Перемикач мобільного меню"
+          width="40"
+          height="40"
+        >
+          <use class="icon-cross" href="./images/icons.svg#icon_cross"></use>
+        </svg>
+      </button>
+
+      <div class="menu__top">
+        <ul class="nav-menu list">
+          <li>
+            <a class="nav-menu__link link current" href="./index.html"
+              >Студія</a
+            >
+          </li>
+          <li>
+            <a class="nav-menu__link link" href="./portfolio.html">Портфоліо</a>
+          </li>
+          <li><a class="nav-menu__link link" href="">Контакти</a></li>
+        </ul>
+      </div>
+
+      <div class="menu__bottom">
+        <ul class="contacts header__contacts list">
+          <li>
+            <a class="contacts__link link" href="emailto:info@devstudio.com">
+              <svg class="contacts__icon" width="16" height="16">
+                <use href="./images/icons.svg#icon_envelope"></use></svg
+              >info@devstudio.com</a
+            >
+          </li>
+          <li>
+            <a class="contacts__link link tel" href="tel:+380961111111">
+              <svg class="contacts__icon" width="16" height="16">
+                <use href="./images/icons.svg#icon_smartphone"></use>
+              </svg>
+              +38 096 111 11 11</a
+            >
+          </li>
+        </ul>
+
+        <ul class="menu-social">
+          <li class="menu-social__item">
+            <a class="menu-social__link" href="">Instagram</a>
+          </li>
+          <li class="menu-social__item">
+            <a class="menu-social__link" href="">Twitter</a>
+          </li>
+          <li class="menu-social__item">
+            <a class="menu-social__link" href="">Facebook</a>
+          </li>
+          <li class="menu-social__item">
+            <a class="menu-social__link" href="">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+    </div>
 
     <!-- Modal Window -->
     <div class="backdrop is-hidden" data-modal>
@@ -583,7 +667,8 @@
               ><span
                 ><svg class="checkbox-icon" width="16" height="15">
                   <use href="./images/icons.svg#check_icon"></use></svg></span
-              >Погоджуюся з розсилкою та приймаю <a class="privacy" href="">Умови договору</a></label
+              >Погоджуюся з розсилкою та приймаю
+              <a class="privacy" href="">Умови договору</a></label
             >
           </div>
 
@@ -594,6 +679,7 @@
       </div>
     </div>
 
+    <script defer src="js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

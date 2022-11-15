@@ -2,9 +2,9 @@
   --main-gap: 30px;
   --main-dark-color: #212121;
   --main-white-color: #ffff;
-  --accent-color: #2196f3;  
+  --accent-color: #2196f3;
   --secondary-white-color: rgba(255, 255, 255, 0.6);
-  --secondary-gray-color: #757575; 
+  --secondary-gray-color: #757575;
   --secondary-black-color: #000000;
   --background-dark-color: #2f303a;
   --background-gray-color: #c4c4c4;
@@ -13,4 +13,9 @@
   --icon-gray-color: #afb1b8;
   --transition-time: 250ms;
   --transition-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --hero-lin-gradient: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    );
 }
