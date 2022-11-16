@@ -7,12 +7,8 @@
   display: flex;
   align-items: center;
 
-  @include media(320px) {
+  @media screen and (max-width: 787px) {
     padding: 16px 15px;
-  }
-
-  @include media(768px) {
-    padding: 21px 15px;
   }
 }
 
@@ -87,10 +83,17 @@
 
 .header__contacts {
   margin-left: auto;
+
+  @include media(1200px) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .contacts__item.mail {
-  margin-bottom: 10px;
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 10px;
+  }
 }
 
 .contacts__link {
