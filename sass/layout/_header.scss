@@ -3,8 +3,17 @@
 }
 
 .header__container {
+  position: relative;
   display: flex;
   align-items: center;
+
+  @include media(320px) {
+    padding: 16px 15px;
+  }
+
+  @include media(768px) {
+    padding: 21px 15px;
+  }
 }
 
 .navigation {
@@ -25,15 +34,19 @@
 }
 
 .nav-menu__link {
-  @extend %header-link;
-
   position: relative;
+
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
 
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--main-dark-color);
+  transition: color var(--transition-time) var(--transition-function);
 
   &:hover,
   &:focus {
@@ -51,19 +64,24 @@
     background-color: var(--accent-color);
     border-radius: 2px;
   }
+
+  @include media(768px) {
+  }
 }
 
 .contacts {
-  display: flex;
-  gap: 30px;
-  margin-left: auto;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 
   @include media(768px) {
     display: block;
+    margin-left: auto;
   }
 
-  @media screen and (max-width: 767px) {
-    display: none;
+  @include media(1200px) {
+    display: flex;
+    gap: 30px;
   }
 }
 
@@ -71,14 +89,19 @@
   margin-left: auto;
 }
 
-.contacts__link {
-  @extend %header-link;
+.contacts__item.mail {
+  margin-bottom: 10px;
+}
 
+.contacts__link {
+  display: flex;
+  align-items: center;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--secondary-gray-color);
+  transition: color var(--transition-time) var(--transition-function);
 
   &:hover,
   &:focus {
@@ -217,12 +240,12 @@
 .mobile__socials {
   display: flex;
   flex-wrap: wrap;
+  margin-left: -10px;
 }
 
 .mobile__soc-item {
   position: relative;
-  right: 10px;
-  }
+}
 
 .mobile__soc-item + .mobile__soc-item::before {
   content: "";
@@ -233,14 +256,11 @@
 }
 
 .mobile__soc-link {
-  // margin-left: 10px;
-  // margin-right: 10px;
-  padding: 0 10px;
+  margin-left: 10px;
+  margin-right: 10px;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: var(--accent-color);
 }
-
-
