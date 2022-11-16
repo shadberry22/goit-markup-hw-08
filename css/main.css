@@ -966,6 +966,7 @@ body {
 @media screen and (min-width: 1200px) {
   .footer__wrap {
     margin-right: 70px;
+    margin-bottom: 0;
   }
 }
 
